@@ -1,0 +1,24 @@
+#==# {[2018/10/20-09:53:04], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-09:53:04], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-09:53:04], MP Status }  :
+#==# {[2018/10/20-09:53:37], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-09:53:37], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-09:53:37], MP Status }  :
+#==# {[2018/10/20-09:56:07], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-09:56:07], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-09:56:07], MP Status }  :
+#==# {[2018/10/20-14:35:59], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-14:35:59], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-14:35:59], MP Status }  :
+#==# {[2018/10/20-14:37:45], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-14:37:45], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-14:37:45], MP Status }  :
+#==# {[2018/10/20-14:43:22], MP Status }  :MP TEST DOWN
+#==# {[2018/10/20-14:43:22], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2018/10/20-14:43:22], MP Status }  :

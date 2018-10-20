@@ -1,0 +1,15 @@
+[ForceFW]
+SupportDisableInterleave=0
+
+
+
+;FLASH_8988244B_ISP=SM3254AEISP_Intel_L74A.BIN
+;FLASH_8988244B_PTEST=SM3254AEPTEST.bin
+;FLASH_8988244B_DisableCardModeFW=1
+
+;FLASH_8988044B_ISP=SM3254AEISP_Intel_L74A.BIN
+;FLASH_8988044B_PTEST=SM3254AEPTEST.bin
+;FLASH_8988044B_DisableCardModeFW=1
+
+
+//---------------------------------------------------------------------//

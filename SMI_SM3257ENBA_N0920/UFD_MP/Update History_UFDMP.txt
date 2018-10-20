@@ -1,0 +1,1041 @@
+Update History UFD MP Tool
+======================================================================================================================
+
+09/04/2013	1) Add USB3.0 check on CSM3255AB::DoCheckUSBMode
+						2) Fix non-power off will erase ISP even open card fail
+10/04/2013	1) Delete some garbage code
+						2) Add "Flash ID Not Fount" show "00 ,00 ,00 ,00 ,00 ,00" 
+						3) Add DisableFillOpenCardInfo option on UI and CID[0x1FD] bit0
+11/04/2013	1) Fix SM326X "Flash ID Not Fount" show "ÀË¬d°{¦s½X¥¢±Ñ"						
+11/04/2013	1) Fix SM326X "Flash ID Not Fount" show "ÀË¬d°{¦s½X¥¢±Ñ" cont'd
+						2) B32: MP Fix serial no cann't fie properly.  (H) 
+						3) B67: MP ROM code mode can't show controller IC properly when enable "Show IC version" option. (L)
+12/04/2013	1) Remove DoReset: Sleep(500+(lp->m_Size/1024)*100) for customer PayCome
+						2) Fix "Flash ID Not Fount" show IC Version
+15/04/2013	1) Fix Debug Dialog can't load parameters when run second time.
+						2) Add check CID when enable EnableWriteBin3M
+						3) Add Hynix 20nm 16K Page flash ID for fix MP can't splite two LUN Hynix 20 nm with 16KPage
+						4) Fix 6DDJ can't splite two LUN when non-power off test
+						5) Initial lp->m_Size when QC for customer Paycome
+						6) Add language translate on setting UI
+17/04/2013	1) Add EnableDebugCIDError for debug CID Buffer
+						2) Modified Setting UI "MP³]©w"
+						3) Update SMIPortMapLib.lib
+19/04/2013	1) Add bPagePairByWord check for ForceFlash.set
+25/04/2013	1) Add special Static Size for SZ customer CustomerType = 1358 
+26/04/2013	1) Add 6DDJ page mode non-Power off Read CID support 
+29/04/2013	1) Load all static size bin table to DLL RAM when CustomerType = 1358 
+03/05/2013	1) Add 3257AA + 6D2H non power off mode support
+						2) Add "EnableSmallSizeUI" option UI layout for 10" EeePC monitor
+06/05/2013	1) Add Logical to Physical function on button "L 2 Phy" use IH2F.BIN.
+07/05/2013	1) Fix Bin1 can't static size issue 
+						
+V 13.5.9.1
+
+		1. Modified Show IC Ver "57ENAA" to "57EN"
+
+V 13.5.9.2
+V 13.5.9.3
+
+		1. Support non power off for samsung 21nn MLC
+		2. Fix EnableDeviceChange can't work
+V 13.5.13.1
+
+		1. Support non power off for samsung 21nn MLC
+V 13.5.14.1
+
+		1. Add show Strong Page Mode (P+A) for 3257ENLT 
+V 13.5.15.1
+
+1. Fix Factory driver portmapping issue when enable check occupied(command 0x28).
+
+V 13.5.16.1
+V 13.5.16.2
+
+1. Add Enable Show New Retry Times 
+2. Add Enable 57En Check 3261 Info 
+
+V 13.5.17.1
+
+1. Add QC PortMapping for LIPSON Hub (Customer_Type = 2000)
+
+V 13.5.20.1 
+
+1. Add EnableShowCopyBack in setting.set (Build error)
+ 
+V 13.5.21.1 
+V 13.5.21.2
+
+1. Add Fix Bin color (for ®É³Ð·N)
+2. Add Flash ID Not Found chinese string (for ®É³Ð·N)
+3. Add Pretest only for 3257AA
+4. Add Save Bit Table for 3257ENAA
+5. Add Check Occupied function
+
+V 13.5.23.1 
+
+1. Add erase ISP before 57EN check 3261AB Info 
+ 
+V 13.5.28.1 
+
+1. Add 57EN check 3261 Info in MP QC
+2. Add Handler return 2 Bytes Error Code (CustomerType=3 for PayCome)
+3. Fix MP QC Check USB Mode Fail
+
+V 13.5.29.1 
+
+1. Fix Check Occupied function 
+
+V 13.5.31.1 
+
+1. Fix Check USB Mode always PASS for SM3261AB
+
+V 13.5.31.2 
+
+1. Add ByteMode supoort for SM3261AB
+
+V 13.6.5.1 
+
+1. Add EnableForceROMCodeMode and IGO2ROM.BIN for non-power off test
+
+
+V 13.6.11.1 
+
+1. Add Page table with 512 Bytes setting UI when CustomerType = 4
+
+V 13.6.13.1 
+
+1. Add Show (P+D) when Page Mode + Different page mode
+
+V 13.6.17.1 
+
+1. Change KingmaxCase Bin1 : 0xF80B bit7, Bin2 :0xF80B bit6
+
+2. Add Check Occupied error code = 0x3A, Un-Format error code =0x3B 
+
+3. Modify Dialog's 'Class Name' to "ABCD" for Testco.
+
+V 13.6.18.1 
+
+1. Add Check Occupied error code = 0x3A, Un-Format error code =0x3B (Fix Show "Format Fail" when "Flash ID Not Found") 
+
+
+V 13.6.20.1 
+
+1. Add Run Script DLL DownloadCIDISP
+
+2. Fill Serial Number at 0x2E0 of CID Buffer for PNY 
+
+
+V 13.6.21.1 
+
+1. Remove "EnableForceROMCodeMode" from setting.set
+
+2. Fix "EnableForceROMCodeMode=1" H2test Fail 
+
+
+V 13.6.25.3 
+
+1. Add Read Flash ID Retry Count for Silicon Power
+
+V 13.6.28.1 
+
+1. Ignore Multi-Lun Check Occupied
+2. Add return 2 Byte Error Code to Handler for CustomerType = 3 (PayCome)
+
+
+V 13.7.1.1 
+V 13.7.1.2 
+
+1. Add Load "CheckInfo.bin" for check 3257EN Info in 3261AB
+
+V 13.7.2.1 
+V 13.7.2.2 
+ 
+1. Add Change Card Mode Debug Function for 3257EN
+2. Fix Copy Compare Fail show "Format Fail"
+3. Add Save Copy Back for Log File
+4. Add "Block Number" for Fast Scan
+
+V 13.7.11.1 
+ 
+1. Add SM3257EN+H27UCG8T2B 16k 20nm for non-poweroff support
+
+V 13.7.15.1 
+ 
+1. Fix EnableWinPE=0 timeout issue for SZ
+
+V 13.7.17.1 
+ 
+1. Add OutPut 0xC000.bin for ScriptDLL develop
+2. Add Copy Compare Pattern Setting
+3. Add Verify Only for Copy Compare Function
+
+V 13.7.24.1 
+ 
+1. Update SMIPortMapLib.lib not send inquiry command for non power off mode
+2. Put code in order
+
+V 13.7.25.1 
+ 
+1. Add Do not install filter driver when factory driver mode
+2. Add Get ISP File Name for Script DLL MP
+
+V 13.7.30.1 
+ 
+1. Fix QC Mode Erase ISP Issue
+
+V 13.8.8.1
+1. Add Erase Info/ISP Function for Kingmax.
+
+V 13.8.8.2  
+ 
+1. Reduce one column of error log for Save Log File.
+2. Modified Update Page Table Function for Script DLL MP
+3. Add LIPSON HUB PortMapping Type on UI
+
+V 13.8.9.1
+V 13.8.9.2  
+ 
+1. Update FilterDriver.cpp
+2. Add CD-ROM select ISO File check.
+3. Add HideUnFormatMsg.cpp
+
+V 13.8.12.1
+ 
+1. Add Hynix 20nm 8k support Byte Mode Multi-Lun
+
+V 13.8.12.2
+ 
+1. Add SM3257ENBA Support
+
+V 13.8.13.1
+ 
+1. Add Hynix 20nm read retry table bin   
+2. Reduce Device Remove Scan Time
+3. Add FactoryDriver.cpp  
+4. Fix log file PASS log and Fail log column not match.  
+
+V 13.8.15.1
+ 
+1. Update FilterDriver.cpp to 1.0.0.4
+2. Update Write dummy data to ISP Block remain pages for Script MP.
+
+V 13.8.16.1
+ 
+1. MP do not Gray Scan Button When Do Port Mapping use flag (EnableUIDeviceChange = 0) 
+2. Auto judge when resolution 1024*768 then enable small size ui flag
+3. Add MP UI Check Button as default string "Check(C)"
+
+
+V 13.8.20.1
+ 
+1. Fix SM3261AB DownloadISP 0x1A (due to updatepagetable error)
+2. Fix SM3261AB Show 4 Plane Error
+3. Add Send test unit ready command for High Level 
+
+V 13.8.23.4
+ 
+1. Add Erase Backup ISP before Load Auto 2 Plane Bin
+2. Add Multi-Thread Scan for DoPortMapping
+3. Add 2Plane Flag on DataBase for Script DLL 
+
+V 13.8.27.1
+ 
+1. Fix MP Close Crash Bug for Script DLL 
+
+V 13.8.29.1
+ 
+1. Fix Auto Handler Text Color Show Wrong Color 
+
+V 13.8.29.1
+ 
+1. Fix Auto Handler Text Color Show Wrong Color 
+
+V 13.9.3.1
+ 
+1. Modify Timeout = 300s for Load Auto 2 Plane Bin
+
+V 13.9.5.1
+ 
+1. Modify Get Backup Bit Table Rule for Load Auto 2 Plane Bin
+2. Modify Read CID Buffer Rule for Samsung 21nm TLC OBP
+
+V 13.9.10.1
+ 
+1. Add SpectekUse in Setting.set for Spectek
+
+V 13.9.10.2
+ 
+1. Modify Script.ini to Script.ebi
+2. Add 5DCJ Byte Mode Support
+
+V 13.9.11.1
+ 
+1. Remove Unuse UI
+2. Fix Wrong Color issue for Auto Handler
+3. Add 4 CE Block Number for Script DLL
+
+V 13.9.12.1
+ 
+1. Remove Some Unuse Objects in MP UI
+2. Change rule for Script file name
+3. Fix 4 CE total HBlock Number for Script DLL
+
+V 13.9.16.1
+ 
+1. Update SMIPortMapLib.lib for Smart PortMapping (EEPROM, QC PortMapping, LIPSEN)
+
+V 13.9.17.1
+ 
+1. Fix Push Stop Button Show "Pretest Fail!"
+
+V 13.9.17.2
+ 
+1. Fix Multiple Erase All Can't Stop
+
+V 13.9.23.1
+ 
+1. Reduce Erase System Block Time for Script DLL MP
+2. Merge H2Test Class
+3. Ignore SM3257ENAAPTEST.bin check for Script DLL MP
+
+V 13.9.26.1
+ 
+1. Add Check m_SMIControl.m_SMIObject == NULL to avoid MP Crash 
+2. Add Show "Please Reopen Device Power" when Device Removable 
+
+V 13.9.26.2
+ 
+1. Add Auto h2testw  
+
+V 13.9.30.1
+ 
+1. Fix Auto H2 Test Format Fail MP Crash
+2. Add Check Special Flash ID for TESTCO
+
+V 13.10.01.1
+ 
+1. Fix Auto H2 Setting UI Hidden
+
+V 13.10.02.1
+ 
+1. Fix 6T/7T Read CID Status Error
+
+V 13.10.04.1
+ 
+1. Fix Auto H2 Show Bin Disappear
+
+V 13.10.08.1
+ 
+1. Save Script File Version to CID offset 0x300
+2. Add SM3267AB Controller Support
+
+V 13.10.09.1
+
+1. support new DBF format 
+2. add read 3267AB strong page mechanism 
+3. modify DoMake3255ABCardModeBuffe() to 3267 Remapping to PreTest
+
+V 13.10.09.2
+
+1. Modified CID Option for SM3267AB
+
+V 13.10.11.1
+
+1. Fix PCBase Parameter Not Match MP Tool
+2. Fix Erase ISP for MLC
+
+V 13.10.11.2
+
+1. Add Initial Parameter 
+2. Don't Show Open Card PASS before Run Auto H2 Test
+
+V 13.10.11.4
+
+1. Add L85 Show 2 Plane Flash ID 
+
+V 13.10.11.6
+
+1. Add L85 Show 2 Plane Flash ID
+2. Fix Don't Show Open Card PASS before Run Auto H2 Test
+
+V 13.10.15.1
+
+1. Fix MP no response bug .
+
+V 13.10.16.1
+
+1. Add show yield rate and Clear status function for TESTCO by RD Hwa
+2. Add Preload after Auto H2
+3. Fix 16K page download ISP for Script MP
+4. Integrate Power off/Non Power off mode use define POWEROFF
+
+V 13.10.17.1
+
+-- Resolve ScriptDataBase no initial  
+-- Resolve 3267 read ForceFlash.set flash page number incorrect 
+
+V 13.10.17.2
+
+1. Modify Download ISP flow for Hynix 20nm 
+
+
+V 13.10.17.3
+
+1. Modify Download ISP flow for Hynix 20nm 
+2. Show Copy Back Mode for Script MP
+
+
+V 13.10.17.4
+
+1. Add Erase ISP and Reset to ROM Code Mode (EnableEraseISPToROM=1)
+2. Add Load Bin to ROM Code Mode (EnableROMCodeMode=0)
+3. Add Clear yield Status default String
+
+
+V 13.10.19.1
+
+1. Modify Auto H2 Function for Silicon Power
+
+V 13.10.20.1
+
+1. Modify Load Script DLL Flow 
+
+V 13.10.21.1
+
+1. Force EnableEraseISPToROM = 1 when CustomerType = 6 (TESTCO)
+2. Fix Free Script DLL bug 
+
+V 13.10.22.1
+
+1. Fix AutoH2 Show Message error, Setting Button can't Push bug
+
+V 13.10.24.1
+
+1. Fix Read CID Block 0xFFFF bug
+2. Merge Save Yield Rate for TESTCO
+
+
+V 13.10.25.1
+
+1. Fix memset Script DLL Stop Flag will cause ScriptIF.dll Stop
+
+V 13.10.27.1
+
+1. Download ISP Strong Mode don't fill all pages for Hynix flash on Script MP
+
+V 13.10.28.5
+
+1. Add File System Preload Compare for Silicon Power
+ 
+V 13.10.29.1
+
+1. Fix Push Start Button then called by Auto Handler return previous TEST_DONE value.
+2. Fix Download ISP don't Fill All Pages for Page Mode 3 for Script MP.
+
+V 13.10.30.1
+
+1. Fix Auto 2 Plane DownloadPageCnt
+2. Add Show Different FW Version Color for Silicon Power
+3. Merge Fixed Setting UI Code by Rose
+4. Add Korea OS support for Auto H2test  
+
+V 13.10.31.1
+
+1. Modify Load Code PTESTD4.bin on Script MP not through ScriptIF.DLL when High Level Open Card
+2. Remove SetCurrentDirectory Function Call
+
+V 13.10.31.4
+
+1. Fix Show Bin Color Bug
+
+V 13.11.1.4
+
+1. Add Save Selected Setting INI
+
+V 13.11.1.5
+
+1. Add Debug Flag in Setting.set
+2. Add h2testw.exe Check when enable AutoH2
+
+V 13.11.4.1
+
+1. Add Over Program ISP for Hynix 20nm Strong Base or Info Use Strong Mode
+
+V 13.11.4.2
+
+1. Add Auto H2 Non-Power off Support
+2. Fix Auto H2 Find Window bug by Hwa
+
+V 13.11.5.2
+
+1. Fix Static Size Calculate Wrong Capacity of PXD for Script MP
+2. Removed MP Error MessageBox for Auto Handler.
+
+V 13.11.5.3
+
+1. Add EnableCheckMatchVer (High Level Package and Low Level Package must be matched) for Silicon Power
+
+V 13.11.6.1
+
+1. Remove Error MessageBox when Check Script PTEST.bin File Version Error.
+2. Fix Auto 2 Plane Flow
+
+V 13.11.6.2
+
+1. Merge Show Flash ID Color UI Code by Rex
+
+V 13.11.10.1
+
+1. Fix Copy Back Mode Overwrite Error Status for Log File
+
+V 13.11.10.2
+
+1. Modify Log File Format for EXCEL
+
+V 13.11.19.1
+
+1. Add Auto 2 Plane Erase ISP Block for Script MP
+  
+V 13.11.21.4
+
+1. Fix Non Power Off Open Card for Script MP
+2. Fix Auto 2 Plane Flow for Script MP
+
+V 13.11.22.3
+
+1. Add Auto Handler Return Sector Mode and Bin Level
+
+V 13.11.26.1
+
+1. Fix Auto 2 Plane if Statement
+
+V 13.11.28.2 (New Setting UI)
+
+1. "Samsung 21nm" option control by FFW
+2. Add a warning message when ¡§Select 2 Lun¡¨ + ¡§Disable S/N¡¨ condition
+3. Default total page size = 5 „³ When enable ¡§CustomerType != 0¡¨, then Page size is 6
+
+V 13.12.3.1
+
+1. Add Erase ISP when Format Fail, Copy Compare Fail, Check ISP Fail, Preload Fail for TESTCO.
+2. Fix Auto 2 Plane Read Info Page 0 Disable Randomizer
+3. Show Bin+C(Capacity First) or Bin+S(Speed First) for Customer AINTEC.
+
+V 13.12.6.1
+
+1. Add Check Occupied before Preload Files
+
+V 13.12.10.3
+
+1. Fix Multi-Lun when non-power off 
+
+V 13.12.11.1
+
+1. Add Reset after Multi-Lun Preload 
+
+V 13.12.11.2
+
+1. Fix 6T2J Multi-Lun Preload + non-power off 
+
+V 13.12.12.1
+
+1. Fix DisablePowerOFFScan=1 MP Gray out Open Card Info, only Scan Button can clean 
+
+V 13.12.16.1
+
+1. Fix Non-Power Off + Auto H2 Test Status Keep "Verify CID/ISP"
+
+
+V 13.12.17.2
+
+1. Add Get New Auto 2 Plane Retry Table
+2. Remove First Time Erase ISP 
+
+V 13.12.17.1
+
+1. Add 2CE Flash force Capacity First when High Level
+2. Remove Test Unit Ready Retry 5 Seconds when High Level
+3. Add "Delete" and "Format" Button when Run Auto H2 Only 
+
+V 13.12.20.1
+
+1. Add Load IGO2ROM.BIN for 57ENBA when EnableROMCodeMode=1 
+
+V 13.12.20.2
+
+1. Add reset hub" auto-handler command with "SMIDevCtrl" for Win7 32/64 bit
+2. Add clear USB regsitry" auto-handler command with :SMIClearUSBRegistry
+
+V 13.12.20.3
+
+1. Add XB_CardMode2 bit5(0xF845) Program ISP 3 times flag for Hynix 20nm
+
+V 13.12.23.1
+
+1. Add SM3257AA AutoH2 Support.
+
+V 13.12.25.1
+
+1. Fix Load IGO2ROM.BIN for EnableROMCodeMode
+
+V 13.12.27.1
+
+1. Fix P+D Mode Show SN Issue
+
+V 13.12.27.2
+
+1. Fix K9ABGD8U0C + Non Power Off Erase Wrong ISP Issue  
+
+V 14.1.2.2
+
+1. Fix K9ABGD8U0C Multi-Lun for SM3257ENBA Issue
+
+V 14.1.3.1
+
+1. Add Show Bin Color and Bad Block Number for Customer AINTEC by Hwa  
+
+V 14.1.6.4
+
+1. Fix Can't Save Serial Number Partial Item on UI Setting   
+
+V 14.1.8.1
+
+1. Add ScriptIF.dll Support Place in Different Folders.
+2. Add Show PXD, PXS Mode
+   
+V 14.1.9.1
+
+1. Add Check Occupied for Run AutoH2 Only
+
+V 14.1.13.2
+
+1. Add Auto Set ECC on FFW (AutoloadFlashECC=1)   
+
+V 14.1.14.1
+
+1. Add Auto Set ECC Show ECC on UI (AutoloadFlashECC=2) and it on DebugView.
+2. Add FBlock Caculation when 0xC042 == 0
+3. Add Auto 2 Plane 6D2H/6D2G Support
+
+V 14.1.15.1
+
+1. Fix Copy Back Mode Read ISP/CID Block ISP Bug (Load DisSeedH.BIN before ReadCID)
+
+V 14.1.16.1
+
+1. Add ForceFW_RunOldDLL Item on FFW for Merge New Script and Old DLL Package.
+   
+V 14.1.17.1
+
+1. Fix Run Old DLL LoadLibrary will be Overwritten when Mixed up Flash
+
+V 14.1.20.1
+
+1. Fix QC can't check Used Space.
+2. Fix QC can't check Disk Label.
+3. Fix QC can't check Write Performance B Flash.
+
+V 14.1.24.1
+
+1. Fix Different Package Open Card by Hwa
+2. Add 1 Plane Flash Do Not Auto 2 Plane 
+3. Fix Press Enter Close MP by Hwa
+
+V 14.1.27.1
+
+1. Fix Show 2 Plane for Hynix 20nm 16K on SM3267AB 
+2. Fix Multi-Lun for SM3267AB 
+3. Add Check DLL Version
+
+V 14.2.7.1
+
+1. Fix Save Write Performance A Show BinB Issue.
+2. Add QC Power ON/OFF Control for AutoHandler.
+
+V 14.2.11.1
+
+1. Add Enable Server SN Support.
+2. Add QC SN Header.
+3. Add Check SN Length.
+
+V 14.2.13.1
+
+1. Add Copy Compare R/W Only for ADATA.
+2. Fix continuous Press Start Button will cause MP crash.
+
+V 14.2.14.1
+
+1. Add Copy Compare R/W Only for ADATA (Fix Low Level Read Only Bug).
+
+V 14.2.14.2
+
+1. Add Enable Smart Bad Column for Script DLL
+
+V 14.2.17.1
+
+1. Add EnableDLLParameters Flag for Script DLL
+
+V 14.2.19.1
+
+1. Add Enable 8M RAM Buffer Flag for DLL Parameters
+
+V 14.2.20.1
+
+1. Add Show Enable Smart Bad Column (Info[0x0C] Bit1 )on MP 
+
+V 14.2.21.1
+V 14.2.21.2
+
+1. Add Show 1P/2P Color when Enable Smart Bad Column (Info[0x0C] Bit1 )on MP 
+
+V 14.2.24.1
+
+1. Change Show "NOB" when Enable Smart Bad Column (Info[0x0C] Bit1 )on MP 
+2. Add Reverse Handler Result
+
+V 14.2.26.1
+
+1. Fix Read CID Bug for Bad Column Flash
+
+V 14.3.5.1
+
+1. Fix Save Block Mode + NOB on Log File
+
+V 14.3.5.2
+
+1. Remove All Space for Log File
+
+V 14.3.5.3
+
+1. Add "F12" and "F7" Function for ADATA
+2. Add AutoLoadINI for ADATA
+
+V 14.3.7.1
+
+1. Add x64 Filter Driver Folder for Win7 x64
+2. Add STOP Command for Auto Handler
+3. Add Erase All Only Function for setting UI
+
+V 14.3.10.1
+
+1. Add AutoLoadINI on Seting UI for ADATA
+
+V 14.3.12.1
+
+1. Add Common Pool Format (FAT/FAT32) form SMIFileSystem.cpp
+2. Add Hide UI Setting (UIENABLE) by Hwa 
+
+V 14.3.12.2
+
+1. Fix Hide UI Function can't Enable multi-lun setting bug
+2. Add Erase Original ISP when High Level Open Card
+
+V 14.3.13.1
+
+1. Fix Hide UI Function can't Enable multi-lun setting bug
+2. Add Show Block Mode Method for Multi-CE Multi-Die
+3. Add Multi-CE Multi-Die Download ISP Support
+
+V 14.3.13.2
+
+1. Fix Status Check Sum Error Issue
+
+V 14.3.14.1
+
+1. Fix 16K Show Block Mode Method for Multi-CE Multi-Die
+
+V 14.3.17.1
+
+1. Fix PXS/PXD Mode Multi-Lun Erase Wrong Original ISP Issue
+
+V 14.3.18.1
+
+1. Add Fill Page for last ISP Page
+
+V 14.3.19.1
+
+1. Fix ISP R/W Clock Setting for SM3257ENBA
+
+V 14.3.20.1
+
+1. Add Show ECC by Hwa
+
+V 14.3.20.2
+
+1. Add Force 0xC000.bin Option
+
+V 14.3.21.1
+
+1. Add Find Info Bin File Support for SM3257ENBA
+
+V 14.3.21.2
+
+1. Add Erase Original ISP for ReDownloadCIDISP
+
+V 14.3.21.3
+
+1. Add Auto H2 Log
+
+V 14.3.24.1
+
+1. Fix Press F7(QC) and F12(Start) Function for AData
+2. Fix Adata SN Sever Can't Save IP Address on INI
+
+V 14.3.26.1
+V 14.3.26.2
+
+1. Add Erase Backup ISP Block for SM3257ENBA  
+
+V 14.3.27.1
+
+1. Add Non Power off + Enable Device Change and Standlone Run Auto H2 Support 
+
+V 14.3.31.1
+
+1. Add Only Bin1 Return Card Mode for Auto Handler.
+2. Add Card Mode Limit for Run Auto H2 Test.
+
+V 14.4.1.1
+
+1. Add DUMMY MODE (DM) for Display and Fill ISP Page
+
+V 14.4.2.1
+
+1. Fix Force Flash ID Bug
+
+V 14.4.8.1
+
+1. Fix Force Flash ID Old DLL Bug
+2. Add Fool-proofing for Bin Level MAX Value
+3. Add Change CE Option 0xC0A1 Bit1 for SanDisk Special Flash
+
+V 14.4.9.1
+
+1. Add Show ECC Threshold when Scan
+2. Fix Fool-proofing for Bin Level MAX Value (MAX: 1048575)
+
+V 14.4.9.2
+
+1. Add ROM Code Mode PHY Setting for SM3267AB
+
+V 14.4.10.1
+
+1. Add Some Auto H2 Log File Function
+
+V 14.4.11.1
+
+1. Add Erase Sector 0 before Open Card for avoid FW no Erase Good cause Format Fail on Win7
+
+V 14.4.14.1
+
+1. Fix Get ISP from FFW bug
+
+V 14.4.14.2
+
+1. Change Fill ISP Page Count for DUMMY Mode
+
+V 14.4.16.1
+
+1. Add Auto H2 Log Request by Steven  
+
+V 14.4.17.1
+
+1. Merge Netcome (CostomerType=9) Bin Color Request Coding by Hwa
+
+V 14.4.18.1
+
+1. Modify Update Page Table and Erase No Bad Column ISP for TLC Coding by Hwa
+
+V 14.4.22.1
+
+1. Remove EraseISPInquiry Merge Code by Hwa
+2. Fix SM3257AA do not Log File 
+
+V 14.4.23.1
+
+1. Modify Auto 2 Plane Judgement
+2. Modify POS Mode DumpISPCnt 
+
+V 14.4.25.1
+
+1. Modify POS/Dummy Mode DumpISPCnt 
+
+V 14.4.28.1
+V 14.4.28.2
+
+1. Remove ReMappingPage Judgement for POS/Dummy Mode DumpISPCnt 
+2. Add Spare Program for Download ISP Page1 (CID Page) 
+
+V 14.4.28.3
+
+1. Add Do Not Show Not SMI Device on Main UI
+
+V 14.4.29.1
+
+1. Fix Download No Bad Column ISP Fail but still Download Bad Column ISP
+ 
+V 14.5.2.1
+
+1. Add New Download ISP Rule for 8T2B
+
+V 14.5.8.1
+
+1. Modify Download ISP for POS 8K ISP
+
+V 14.5.9.1
+
+1. Merge EnableTESTID Special Request Code by Hwa
+
+V 14.5.9.2
+
+1. Merge EnableTESTID Special Request Code Modified by Hwa
+
+V 14.5.9.3
+
+1. Convert DG NDefault.INI to Normal INI Format for ADATA
+
+V 14.5.12.1
+V 14.5.12.2
+
+1. Fix MP Crash on Bentio PC due to SM3259AA Code.
+2. Add Check 8 Die Flag on Force Flash Set FlashOPT[22] bit7
+
+V 14.5.13.1
+V 14.5.14.1
+
+1. Add Force Auto 2 Plane Option on Setting.set
+2. Add Write Bin Level To Flash Function
+
+V 14.5.15.1
+
+1. Add SM3259AA Download ISP Function
+2. Fix SM3257ENBA non-power off Open Card Hang up (Due to ReDownloadCIDISP Erase Bad Column ISP)
+
+V 14.5.16.1
+
+1. Modified Controller Version definition of SMIVendorCmd.h for fit OLD DLL Controller Version definition
+
+V 14.5.16.2
+
+1. Fix SM3259AA Pretest and Download ISP Flow
+
+V 14.5.19.1
+
+1. Fix SM3259AA Pretest and Download ISP Flow Related File Path
+
+V 14.5.20.1
+
+1. Modified SM3259AA 512 Pretest Parameters 
+2. Merge Hwa's EnableTESTID Code 
+
+V 14.5.20.2
+
+1. Merge Hwa's EnableLowToHigh Code 
+
+V 14.5.21.1
+V 14.5.21.2
+V 14.5.21.3
+
+1. Fix AData Save Normal INI Issue.
+2. Add Show Card Mode for SM3259AA.
+3. Change Get FlashOPT[21] for Plane Number for SM3259AA 
+
+V 14.5.23.1
+
+1. Merge Hwa's EnableLowToHigh Code 
+2. Fix CID Parameters for SM3259AA.
+3. Modified Download ISP Flow for SM3259AA 
+
+V 14.5.23.2
+
+1. Modified Download ISP Flow for SM3259AA Cont'd
+
+V 14.5.26.1
+
+1. Merge Hwa's Code UseDiskLetter=1, VolumeLock=1 for CreateFile(...)
+
+V 14.5.27.1
+
+1. Fix Script DLL Load Default Path (DLLLIB) Crash 
+
+V 14.5.29.1
+
+1. Add Show Copy Back Mode for SM3259AA
+2. Add DoGetCardMode Function
+3. Add ReadCID Function for SM3259AA
+
+V 14.5.29.2
+
+1. Add Device Change after H2Test Only Format
+2. Add Show FW/MP Version on UI Setting
+
+V 14.5.30.1
+V 14.5.30.2
+
+1. Merge Hwa's Code for EnableTESTID and UI Adjust
+2. Disable Cache Program for SM3259AA
+
+V 14.6.4.1
+
+1. Add Multi-Lun Function for SM3259AA
+
+V 14.6.6.1
+
+1. Add Set CE Register when Read Flash ID for SM3259AA
+
+V 14.6.10.1
+
+1. Add Show and Save Cut Page Number/ Bad Column Number for SM3259AA
+
+V 14.6.11.1
+
+1. Add EnCopyFileToDLLLIB on ISPNum.INI for SM3259AA
+
+V 14.6.11.2
+
+1. Add Show Bin Level on Log File for SM3259AA
+
+V 14.6.13.1
+
+1. Merge Hwa's Code (Fix Open Card too fast for Stable Testing of TESTCO)
+2. Merge Hwa's Code (Fix Win7 Format Fail and Show Bad Block on H2 Log)
+
+V 14.6.16.1
+
+1. Add Dummy Page Program for SM3257ENBA
+
+V 14.6.18.1
+
+1. Add PXD Mode ISP Check If Block Mode
+
+V 14.6.18.2
+V 14.6.18.3
+V 14.6.18.4
+
+1. Fix PXD Mode ISP Check If Block Mode Bug
+2. Add Dummy Page Program Fill 0xFF for SM3259AA
+3. Fix Auto H2 Select Device Fail by Hwa
+
+V 14.6.20.1
+
+1. Add EnableSyncSocketClient for ADATA.
+
+V 14.7.7.1
+
+1. Add Auto Handler Command for Silicon Power
+
+V 14.7.10.3
+
+1. Add Auto Handler Command return INI Path for DLTech
+
+V 14.8.19.1
+
+1. Add Write Bin Level to Flash without ECC
+2. Add Show POS+S on Log File for SM3259AA
+
+V 14.8.28.2
+
+1. Modify WriteBinLevel Function to write good block and strong page.
+

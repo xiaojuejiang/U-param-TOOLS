@@ -1,0 +1,9 @@
+SM32XX Search Block 7B9 ~ Block 7B9 ECC Sector(s)
+Channel[A] - Blk[007B9] Page[038] SectorIdx[6] nCE[00] PlaneBit[1] Data[0x411]=0x00 Un-Correctable
+Channel[B] - Blk[007B9] Page[038] SectorIdx[6] nCE[00] PlaneBit[1] Data[0x431]=0x01 Un-Correctable
+Channel[A] - Blk[007B9] Page[038] SectorIdx[7] nCE[00] PlaneBit[1] Data[0x411]=0x02 Un-Correctable
+Channel[B] - Blk[007B9] Page[038] SectorIdx[7] nCE[00] PlaneBit[1] Data[0x431]=0x02 Un-Correctable
+2Run - Channel[A] - Blk[007B9] Page[038] SectorIdx[0] nCE[00] PlaneBit[0] Data[0x411]=0x00 Un-Correctable
+2Run - Channel[B] - Blk[007B9] Page[038] SectorIdx[0] nCE[00] PlaneBit[0] Data[0x411]=0x00 Un-Correctable
+2Run - Channel[A] - Blk[007B9] Page[038] SectorIdx[0] nCE[00] PlaneBit[1] Data[0x411]=0x00 Un-Correctable
+2Run - Channel[B] - Blk[007B9] Page[038] SectorIdx[0] nCE[00] PlaneBit[1] Data[0x411]=0x00 Un-Correctable

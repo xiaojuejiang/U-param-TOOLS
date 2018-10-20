@@ -1,0 +1,4 @@
+#==# {[2013/01/04-19:30:51], MP Status }  :MP TEST DOWN
+#==# {[2013/01/04-19:30:51], MP Status }  :g_RunningNetPLC=0
+
+#==# {[2013/01/04-19:30:51], MP Status }  :

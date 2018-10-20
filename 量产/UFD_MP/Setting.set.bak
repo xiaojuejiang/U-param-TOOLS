@@ -1,0 +1,79 @@
+[FORCEID]
+ENABLEFORCEID=0 
+
+[FUNCTION]
+MULTIPLEERASEALL=1
+ENABLEINCREASEPAGE=0
+ENABLEDOWNGRADE=0
+ENABLEOUTPUTBINFILE=0
+EnableHynixDriveCurrent=1
+EnableBYPassCheckImageSize=1
+EnableFirstMatchStaticSize=1
+EnableCosairFormat=0
+EnableNTFSQuickFormat=1
+EnableFixBinLevel=0
+EnableClearPairTable=1
+EnableInBoxPortMap=0
+Force4WayIntvCnt=37
+Force4WayIntv_FlashID1=98,98,98,98,98,45,45,45,45,98,98,98,98,98,98,45,45,45,45,45,45,45,45,98,98,98,98,98,45,45,EC,EC,EC,98,45,EC,EC
+Force4WayIntv_FlashID2=D7,D7,DE,DE,3A,DE,DE,D7,D7,D7,DE,D5,D7,D7,DE,DE,CE,D7,D7,D7,D7,DE,3A,3A,D7,D7,DE,DE,DE,DE,D6,D7,DE,3C,3C,3A,3C
+Force4WayIntv_FlashID3=98,98,98,98,99,98,98,98,98,98,A8,88,98,98,A8,A8,A8,98,98,98,94,98,D6,D6,98,98,98,98,98,98,98,98,98,A9,A9,D9,D9
+Force4WayIntv_FlashID4=92,92,92,92,92,92,92,92,92,82,82,82,82,82,82,82,82,82,82,82,32,92,32,32,92,92,92,92,92,92,CE,CE,CE,92,92,CE,CE
+Force4WayIntv_FlashID5=72,72,72,72,76,72,72,72,72,76,7A,72,76,76,7A,7A,7A,76,76,76,76,72,7E,7E,72,72,72,72,72,72,74,74,74,7A,7A,78,78
+Force4WayIntv_FlashID6=56,D6,56,D6,56,56,D6,56,D6,55,55,55,55,D5,D5,D5,D5,D5,75,55,56,57,D5,D5,57,D5,57,D7,57,D7,C4,C4,C4,57,57,C4,C4
+EnableBadColumnBinViaFFW=1 \\SM3260AD OBP option
+EnableIESLCViaFFW=1 \\HY option
+/EnablePreventWriteProtect=1 \\set 1 will disable write protect
+DisableAdvanceDebug=1
+/EnableBypassVerifyISP=1
+/EnableSanDiskLED=1
+HynixReadRetryCnt=4
+HynixReadRetry_FlashID1=AD,AD,AD,AD
+HynixReadRetry_FlashID2=DE,D7,DE,D5
+HynixReadRetry_FlashID3=94,94,94,94
+HynixReadRetry_FlashID4=DA,91,EB,DA
+HynixReadRetry_FlashID5=74,60,74,74
+HynixReadRetry_FlashID6=C4,44,44,C4
+EnableOneLEDOnly=0 \\ set0:LED1/2 blinking;set1:only 1LED blinking
+EnableControlLED1=0 \\set0:D1 ON; set1:D2 ON
+ForcePretest8KSizeCnt=0
+Pretest8K_FlashID1=98,98,98,98,45,45,45,45,98,98,98,98,45,45
+Pretest8K_FlashID2=D7,D7,DE,DE,DE,DE,D7,D7,D7,D7,DE,DE,D7,DE
+Pretest8K_FlashID3=98,98,98,98,98,98,98,98,98,98,98,98,98,98
+Pretest8K_FlashID4=92,92,92,92,92,92,92,92,92,92,92,92,92,92
+Pretest8K_FlashID5=72,72,72,72,72,72,72,72,72,72,72,72,72,72
+Pretest8K_FlashID6=56,D6,56,D6,56,D6,56,D6,57,D7,57,D7,57,57
+NewFAT32AlignType=0
+ForceNewFAT32AlignTypeCnt=18
+FAT32Align_FlashID1=98,98,45,EC,EC,EC,98,98,98,98,45,45,98,98,45,45,98,45
+FAT32Align_FlashID2=3A,3A,4C,D7,D5,DE,D7,D7,DE,DE,D7,DE,DE,DE,DE,DE,3C,3C
+FAT32Align_FlashID3=A8,A8,A8,98,98,98,98,98,98,98,98,98,98,98,98,98,A9,A9
+FAT32Align_FlashID4=92,92,92,CE,CE,CE,92,92,92,92,92,92,92,92,92,92,92,92
+FAT32Align_FlashID5=76,76,76,74,74,74,72,72,72,72,72,72,72,72,72,72,7A,7A
+FAT32Align_FlashID6=57,D7,57,C4,C4,C4,57,D7,57,D7,57,57,56,D6,56,D6,57,57
+EnableForcePHYChange=1
+PhyAddress=18  
+PhyVal=8F04
+EnableFixBinUI=0 \\SDK OEM
+EnablePTEST8CE=0 \\ Support 8CE and run 4way only
+EnableQuickSearch=1 \\Disable full-search Fset when flash ID cannot be found via quick search.
+ENABLEPRESCAN=0 \\ For sam's customer 
+EnableTSBProject=0 \\55EN with SDK MLC
+
+[MPINFO]
+PACKAGEVER=L1221v1
+
+[OPTION]
+RunProducttionMode=1
+
+[INITIAL]
+EnableAutoLoad=0
+DELETELOCALINI=0
+EnableNoDeleteINI=0
+AutoLoadINIPath=
+
+
+
+[TEST]
+CtrlBoardDiskLetter1=
+CtrlBoardDiskLetter2=

@@ -1,0 +1,76 @@
+
+;
+; Copyright(C) 1998-2003 Silicon Motion Corp. All rights reserved.
+;
+
+[Version]
+Signature=$CHICAGO$
+Class=USB
+LayoutFile=layout.inf
+provider=%VENDOR%
+
+[ClassInstall]
+
+[DestinationDirs]
+SMI320.Files.Ext=10,System32\Drivers
+SMI320.Files.Inf=10,INF
+
+[Manufacturer]
+%SMIHWTeam%=SMIHW
+
+[SMIHW]
+%SMIICNameUSB%=SMI320.Dev,USB\VID_090C&PID_0100
+%SMIICNameUSB%=SMI320.Dev,USB\VID_090C&PID_1000
+%SMIICNameUSB%=SMI320.Dev,USB\VID_090C&PID_2000
+%SMIICNameUSB%=SMI320.Dev,USB\VID_090C&PID_3000
+
+
+[SMI320.Dev]
+CopyFiles=SMI320.Files.Ext,SMI320.Files.Inf
+AddReg=SMI320.AddReg
+
+[SMI320.Files.Ext]
+;smi320.sys
+
+
+[SMI320.Files.Inf]
+;smi320.inf
+
+[SMI320.AddReg]
+HKR,,DevLoader,0,*ntkern
+HKR,,NTMPDriver,0,smi320.sys
+HKLM,System\Currentcontrolset\Services\SMI320\Parameters,MaximumTransferSize,1,96
+HKLM,System\Currentcontrolset\Services\SMI320\Parameters,DebugLevel,1,02
+HKLM,System\Currentcontrolset\Services\SMI320\Parameters,TimeOutInterval,1,01,F4
+
+[ControlFlags]
+
+[PreCopySection]
+HKR,,NoSetupUI,,1
+
+[SMI320.Dev.NT]
+CopyFiles=SMI320.Files.Ext, SMI320.Files.Inf
+AddReg=SMI320.AddReg
+
+[SMI320.Dev.NT.Services]
+Addservice = SMI320, 0x00000002, SMI320.AddService
+
+[SMI320.AddService]
+DisplayName    = %SMIICNameNT%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 2                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\smi320.sys
+LoadOrderGroup = Base
+
+
+[Strings]
+VENDOR="SMI "
+SMISWTeam   = "SMI Corp."
+SMIHWTeam   = "SMI Corp."
+SMIICName   = "SMI 320 Factory Driver"
+SMIICNameNT = "SMI 320 Factory Driver"
+
+SMIICNameUSB = "SMI 320 Factory Driver"
+
+
